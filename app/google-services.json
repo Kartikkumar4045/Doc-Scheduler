@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "748272954981",
+    "project_id": "doc-schedule1",
+    "storage_bucket": "doc-schedule1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748272954981:android:fd1dbcb9c15d54ce61208c",
+        "android_client_info": {
+          "package_name": "com.example.doc_schedule"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3yw7EV0vxMJ1CWbCHpCmRIugwFhEhBAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
