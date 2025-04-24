@@ -2,4 +2,7 @@
     <string name="app_name">Doc_Schedule</string>
     <string name="exceptional_care_n_close_to_you">Exceptional care\n close to you</string>
     <string name="make_appointment">Make Appointment</string>
+    <string name="doctor_image">Doctor Image</string>
+    <string name="favorite_icon">Favorite Icon</string>
+
 </resources>

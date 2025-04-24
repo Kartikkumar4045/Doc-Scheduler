@@ -43,6 +43,7 @@ class TopDoctorAdapter(val items:MutableList<DoctorsModel>):RecyclerView.Adapter
             intent.putExtra("object",items[position])
             context?.startActivity(intent)
         }
+
     }
 
     override fun getItemCount(): Int = items.size

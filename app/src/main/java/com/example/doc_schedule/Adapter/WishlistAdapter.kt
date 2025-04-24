@@ -13,39 +13,39 @@ import com.example.doc_schedule.Activity.DetailActivity
 import com.example.doc_schedule.Domain.DoctorsModel
 import com.example.doc_schedule.Manager.WishlistManager
 import com.example.doc_schedule.R
-import com.example.doc_schedule.databinding.ViewholderTopDoctor2Binding
+import com.example.doc_schedule.databinding.ViewholderWishlistBinding
 
-class TopDoctorAdapter2(val items:MutableList<DoctorsModel>):RecyclerView.Adapter<TopDoctorAdapter2.Viewholder>() {
-    private var context:Context?=null
+class WishlistAdapter(val items: MutableList<DoctorsModel>) :
+    RecyclerView.Adapter<WishlistAdapter.Viewholder>() {
 
-    class Viewholder(val binding: ViewholderTopDoctor2Binding) :
-        RecyclerView.ViewHolder(binding.root){
+    private var context: Context? = null
 
-    }
+    class Viewholder(val binding: ViewholderWishlistBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopDoctorAdapter2.Viewholder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Viewholder {
         context = parent.context
-        val binding =
-            ViewholderTopDoctor2Binding.inflate(LayoutInflater.from(context), parent, false)
+        val binding = ViewholderWishlistBinding.inflate(LayoutInflater.from(context), parent, false)
         return Viewholder(binding)
     }
 
-    override fun onBindViewHolder(holder: TopDoctorAdapter2.Viewholder, position: Int) {
-        holder.binding.nameTxt.text= items[position].Name
-        holder.binding.specialTxt.text= items[position].Special
-        holder.binding.scoreTxt.text= items[position].Rating.toString()
-        holder.binding.ratingBar.rating=items[position].Rating.toFloat()
-        holder.binding.scoreTxt.text=items[position].Rating.toString()
-        holder.binding.degreeTxt.text="Professional Doctor"
+    override fun onBindViewHolder(holder: Viewholder, position: Int) {
+        val doctor = items[position]
+
+        holder.binding.nameTxt.text = doctor.Name
+        holder.binding.specialTxt.text = doctor.Special
+        holder.binding.scoreTxt.text = doctor.Rating.toString()
+        holder.binding.ratingBar.rating = doctor.Rating.toFloat()
+        holder.binding.degreeTxt.text = "Professional Doctor"
 
         Glide.with(holder.itemView.context)
-            .load(items[position].Picture)
-            .apply{ RequestOptions().transform(CenterCrop()) }
+            .load(doctor.Picture)
+            .apply { RequestOptions().transform(CenterCrop()) }
             .into(holder.binding.img)
 
         holder.binding.makeBtn.setOnClickListener {
-            val intent=Intent(context,DetailActivity::class.java)
-            intent.putExtra("object",items[position])
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra("object", doctor)
             context?.startActivity(intent)
         }
 
@@ -69,4 +69,7 @@ class TopDoctorAdapter2(val items:MutableList<DoctorsModel>):RecyclerView.Adapte
     }
 
     override fun getItemCount(): Int = items.size
+
+
+
 }

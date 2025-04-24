@@ -3,13 +3,14 @@ package com.example.doc_schedule.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.doc_schedule.Adapter.CategoryAdapter
 import com.example.doc_schedule.Adapter.TopDoctorAdapter
+import com.example.doc_schedule.R
 import com.example.doc_schedule.ViewModel.MainViewModel
 import com.example.doc_schedule.databinding.ActivityMainBinding
 
@@ -22,6 +23,13 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val wishBtn = findViewById<LinearLayout>(R.id.wishlistBtn)
+
+        wishBtn.setOnClickListener{
+            val intent = Intent(this, WishlistActivity::class.java)
+            startActivity(intent)
+        }
 
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 

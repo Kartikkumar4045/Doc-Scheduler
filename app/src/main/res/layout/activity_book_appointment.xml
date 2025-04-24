@@ -261,7 +261,7 @@
                                 app:cardElevation="4dp">
 
                                 <EditText
-                                    android:id="@+id/et_name"
+                                    android:id="@+id/etName"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@color/lightPurple"
@@ -280,7 +280,7 @@
                                 app:cardElevation="4dp">
 
                                 <EditText
-                                    android:id="@+id/et_phone"
+                                    android:id="@+id/etPhone"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:hint="Phone Number"
@@ -300,7 +300,7 @@
                                 app:cardElevation="4dp">
 
                                 <EditText
-                                    android:id="@+id/et_date"
+                                    android:id="@+id/etDate"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@color/lightPurple"
@@ -320,7 +320,7 @@
                                 app:cardElevation="4dp">
 
                                 <EditText
-                                    android:id="@+id/et_time"
+                                    android:id="@+id/etTime"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@color/lightPurple"
@@ -340,7 +340,7 @@
                                 app:cardElevation="4dp">
 
                                 <EditText
-                                    android:id="@+id/et_reason"
+                                    android:id="@+id/etReason"
                                     android:layout_width="match_parent"
                                     android:layout_height="100dp"
                                     android:background="@color/lightPurple"
@@ -352,7 +352,7 @@
                             </androidx.cardview.widget.CardView>
 
                             <Button
-                                android:id="@+id/btn_submit_appointment"
+                                android:id="@+id/btnSubmitAppointment"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
